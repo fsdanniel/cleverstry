@@ -7,6 +7,13 @@
     display: grid;
     z-index: 15;
   }
+
+ 
+ .image{
+    width: 78px;
+    border-radius: 5px;
+    padding-left: 30px;
+  }
   
   .header-wrapper {
     position: fixed;
@@ -62,23 +69,26 @@
     width: 100%;
     height: 60%;
     position: absolute;
+    padding-top: 90px;
   }
   .slogan {
     display: flex;
     width: 100%;
     height: 40%;
-  
-    position: absolute;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    bottom: 0;
+    padding-top: 240px;
+    padding-left: 40px;
+
   }
   
-  .slogan p {
+  .bottom-slogan {
     line-height: 28px;
     margin-left: 25px;
     margin-top: 24px;
-    font-weight: 800;
+    font-weight: 500;
+    color:rgb(122, 117, 173);
+    bottom: 0;
+    padding-top: 300px;
+    padding-right: 90px;
   }
   
   .name h1 {

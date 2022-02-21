@@ -16,32 +16,32 @@ return(
       <main>
         <form className="create-orphanage-form">
           <fieldset>
-            <legend>Cadastre-se</legend>
+            <legend>Criar WQs</legend>
 
             <div className="input-block">
-              <label htmlFor="name">Nome</label>
-              <input id="name" placeholder="Digite seu nome"/>
+              <label htmlFor="name">Título</label>
+              <input id="name" placeholder="Digite o título da WQ"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="name">Email</label>
-              <input id="name" placeholder="Digite seu email"/>
+              <label htmlFor="name">Instituição</label>
+              <input id="name" placeholder="Digite sua instituição"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="name" >Senha</label>
-              <input id="name" placeholder="Digite sua senha" />
+              <label htmlFor="name" >Nivel Escolar</label>
+              <input id="name" placeholder="Digite o nível escolar" />
             </div>
             <div className="input-block">
-              <label htmlFor="name" >Confirme sua senha</label>
-              <input id="name" placeholder="Digite sua senha novamente" />
+              <label htmlFor="name" >Tópico</label>
+              <input id="name" placeholder="Digite o assunto da WQ" />
             </div>
 
             <div className="input-block">
               <label htmlFor="about">
-                Sobre <span>Máximo de 300 caracteres</span>
+                Descrição <span>Máximo de 300 caracteres</span>
               </label>
-              <textarea id="name" maxLength={300} />
+              <textarea placeholder="Digite a descrição da WQ" id="name" maxLength={300} />
             </div>
 
             <div className="input-block">

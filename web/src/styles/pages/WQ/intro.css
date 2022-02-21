@@ -1,0 +1,20 @@
+.padding{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #d3e2e5;
+}
+
+.padding h1{
+    font-size: 40px;
+    font-weight: 700;
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    display: block;
+    right: 0;
+    color: #5c8599;
+    
+ 
+    
+}

@@ -19,6 +19,9 @@
     overflow: hidden;
   }
   
+  form.create-orphanage-form p{
+text-align: justify;
+  }
   
     fieldset {
     border: 0;

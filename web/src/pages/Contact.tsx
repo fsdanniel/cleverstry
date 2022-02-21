@@ -15,17 +15,17 @@ export default function Contact() {
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
-              <input id="name" />
+              <input id="name" placeholder="Digite seu nome"/>
             </div>
 
             <div className="input-block">
               <label htmlFor="name">Email</label>
-              <input id="name" />
+              <input id="name" placeholder="Digite seu e-mail"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="instructions">Instruções</label>
-              <textarea id="instructions" />
+              <label htmlFor="instructions">Comentários</label>
+              <textarea id="instructions" placeholder="Deixe seu comentário"/>
             </div>
 
 

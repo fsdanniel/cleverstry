@@ -9,83 +9,77 @@ import Sidebar from "../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
 export default function SignUpPage() {
+  const navigate = useNavigate();
+  const [name , setName] = useState('')
+  const [email , setEmail] = useState('')
+  const [password , setPassword] = useState('')
+  const [username , setUsername] = useState('')
+  
+  async function handleSubmit(event: FormEvent){
+    event.preventDefault() // impede a pagina de recarregar quando o form é enviado
+
+
+    const data = new FormData() //devido a utilização de imagens, não se pode usar Json por isso utilizamos isso 
+
+    data.append('name', name)
+    data.append('email', email)
+    data.append('username', username)
+    data.append('password', password)
+    
+
+
+    await api.post('orphanages', data)
+
+    alert('Cadstro realizado com sucesso!')
+    navigate('/login') //redireciona o user para a pagina /app
+  }
+  
+  
   return (
     <div id="page-create-orphanage">
       <Sidebar />
 
       <main>
-        <form className="create-orphanage-form">
+        <form onSubmit={handleSubmit} className="create-orphanage-form">
           <fieldset>
             <legend>Cadastre-se</legend>
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
-              <input id="name" />
+              <input id="name"  value={name} 
+              onChange={event => setName(event.target.value)} placeholder="Digite seu nome"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="name">Email</label>
-              <input id="name" />
+              <label htmlFor="username">Usuário</label>
+              <input id="username"  value={username} 
+              onChange={event => setUsername(event.target.value)} placeholder="Digite seu nome de usuário"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="name">Senha</label>
-              <input id="name" />
-            </div>
-            <div className="input-block">
-              <label htmlFor="name">Confirme sua senha</label>
-              <input id="name" />
+              <label htmlFor="email">Email</label>
+              <input id="email"  value={email} 
+              onChange={event => setEmail(event.target.value)} placeholder="Digite seu email"/>
             </div>
 
             <div className="input-block">
-              <label htmlFor="about">
-                Sobre <span>Máximo de 300 caracteres</span>
-              </label>
-              <textarea id="name" maxLength={300} />
+              <label htmlFor="password">Senha</label>
+              <input type="password"  value={password} 
+              onChange={event => setPassword(event.target.value)} id="password" placeholder="Digite sua senha"/>
             </div>
 
-            <div className="input-block">
-              <label htmlFor="images">Fotos</label>
 
-              <div className="images-container">
-                {}
-                <label htmlFor="image[]" className="new-image">
-                  <FiPlus size={24} color="#15b6d6" />
-                </label>
-              </div>
-              <input multiple type="file" id="image[]" />
-            </div>
+           
           </fieldset>
 
-          <fieldset>
-            <legend>Visitação</legend>
-
-            <div className="input-block">
-              <label htmlFor="instructions">Instruções</label>
-              <textarea id="instructions" />
-            </div>
-
-            <div className="input-block">
-              <label htmlFor="opening_hours">Horário de funcionamento</label>
-              <input id="opening_hours" />
-            </div>
-
-            <div className="input-block">
-              <label htmlFor="open_on_weekends">Atende fim de semana</label>
-
-              <div className="button-select">
-                <button type="button">Sim</button>
-
-                <button type="button">Não</button>
-              </div>
-            </div>
-          </fieldset>
-
+        
           <button className="confirm-button" type="submit">
             Confirmar
           </button>
         </form>
       </main>
+
+      
     </div>
   );
 }

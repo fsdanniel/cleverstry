@@ -2,7 +2,7 @@ import React from "react";
 import {FiArrowRight} from 'react-icons/fi';
 import '../styles/global.css';
 import '../styles/pages/landing-page.css'
-
+import Logo from "../images/icon-192x192.png"
 import {Link} from 'react-router-dom';
 {/*Importação utilizada para que seja possivel realizar SPA substitui a tag <a> não possui refresh!!!*/}
 
@@ -10,7 +10,11 @@ export default function  LandingPage(){
     return(
         <div id="page-landing">
 
-        <div className="page-40"></div>
+        <div className="page-40">
+        <div className="image">
+        <img src={Logo} alt="Cy" />
+        </div>
+        </div>
 
         <div className="content-wrapper">
             

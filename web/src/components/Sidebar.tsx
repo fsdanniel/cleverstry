@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Logo from '../images/icon-32x32.png' 
 import { FiArrowLeft } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ export default function Sidebar(){
   const navigate = useNavigate();
   return (
     <aside className="app-sidebar">
-        <img  alt="Cy" />
+        <img src={Logo} alt="Cy" />
 
         <footer>
           <button type="button" onClick={()=> navigate(-1)}>

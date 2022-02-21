@@ -17,6 +17,17 @@
 
 }
 
+#page-landing .page-40 .image{
+    display: flex;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+#page-landing .page-40 .image img{
+    border-radius: 20px;
+}
 
 #page-landing .content-wrapper{
     position: relative; /*so the content gonna be relative to the existent div they're in*/
@@ -52,6 +63,7 @@
 #page-landing .content-wrapper header h1{
     font-size:76px;
     font-weight: 900;
+    padding-top: 40px;
 }
 
 #page-landing .content-wrapper main p{
@@ -59,6 +71,7 @@ margin-top: 40px;
 font-size: 20px;
 line-height: 27px;
 max-width: 390px;
+color: rgb(101, 95, 156);
 }
 
 .content-wrapper .button-container{
@@ -66,6 +79,7 @@ max-width: 390px;
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
     column-gap: 20%;
+    padding-bottom: 30px;
 }
 
 .content-wrapper .button-app{   
